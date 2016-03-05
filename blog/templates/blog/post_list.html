@@ -7,5 +7,12 @@
             </div>
             <div><img src="http://www.catgifs.org/wp-content/uploads/2013/09/099_manycatsinthebox_cat_gifs.gif" alt="'xcuse me'">
             </div>
+            {% for post in posts %}
+            	<div>
+            		<p>published: {{ post.published_date }}</p>
+            		<h1><a href="">{{ post.title }}</a></h1>
+            		<p>{{ post.text|linebreaks }}</p>
+            	</div>
+            {% endfor %}
         </body>
 </html>
